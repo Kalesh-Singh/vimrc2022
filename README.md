@@ -34,7 +34,7 @@ sudo apt install bear
 bear --version
 ```
 
-# Compile the project with bear
+### Compile the project with bear
 
 ```
 cd linux
