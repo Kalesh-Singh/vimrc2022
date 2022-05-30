@@ -11,7 +11,6 @@ vim --version
 
 ### Update Node Js (12.0+)
 
-
 ```
 curl -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh
 sudo bash /tmp/nodesource_setup.sh
@@ -19,12 +18,14 @@ sudo apt install nodejs
 node -v
 ```
 
-### Installing CCLS Server
+# Installing CCLS Server
 
 ```
 sudo apt install snap
 snap install --classic ccls
 ```
+
+# Generate compile_commands.json
 
 ### Install Bear
 
@@ -33,7 +34,7 @@ sudo apt install bear
 bear --version
 ```
 
-### Generate compile_commands.json
+# Compile the project with bear
 
 ```
 cd linux
