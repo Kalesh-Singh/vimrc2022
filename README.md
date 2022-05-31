@@ -18,6 +18,31 @@ sudo apt install nodejs
 node -v
 ```
 
+### :CocConfig
+
+ ~/.vim/coc-settings.json
+
+```
+{
+"languageserver": {
+  "ccls": {
+    "command": "ccls",
+    "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+    "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+    "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        },
+        "client": {
+          "snippetSupport": true
+        }
+      }
+  }
+}
+}
+```
+
+
 # Installing CCLS Server
 
 ```
@@ -38,6 +63,6 @@ bear --version
 
 ```
 cd linux
-make -j`nproc` defconfig
-bear make -j`nproc`
+make CC=clang -j`nproc` defconfig
+bear make ARCH=arm64 CC=clang CROSS_COMPILE=aarch64-linux-gnu- -j`nproc`
 ```
